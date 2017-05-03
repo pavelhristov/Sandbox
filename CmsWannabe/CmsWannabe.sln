@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmsWannabe", "CmsWannabe\CmsWannabe.csproj", "{2D3F1290-02DC-404F-860E-866034919302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmsWannabe.Tests", "CmsWannabe.Tests\CmsWannabe.Tests.csproj", "{E5CB3366-2B44-4391-BB75-F9986940FFDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmsWannabe.Data", "CmsWannabe.Data\CmsWannabe.Data.csproj", "{C69817F6-FD76-499B-8591-1F653C016A3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D3F1290-02DC-404F-860E-866034919302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3F1290-02DC-404F-860E-866034919302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3F1290-02DC-404F-860E-866034919302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3F1290-02DC-404F-860E-866034919302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5CB3366-2B44-4391-BB75-F9986940FFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5CB3366-2B44-4391-BB75-F9986940FFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5CB3366-2B44-4391-BB75-F9986940FFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5CB3366-2B44-4391-BB75-F9986940FFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69817F6-FD76-499B-8591-1F653C016A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69817F6-FD76-499B-8591-1F653C016A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69817F6-FD76-499B-8591-1F653C016A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69817F6-FD76-499B-8591-1F653C016A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

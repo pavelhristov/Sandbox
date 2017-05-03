@@ -1,0 +1,14 @@
+﻿@model CmsWannabe.Models.PostContentViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div>
+        @Html.Partial("Image", Model.Image)
+    </div>
+    <hr />
+    <div>
+        @Html.Partial("Table")
+    </div>
+</div>

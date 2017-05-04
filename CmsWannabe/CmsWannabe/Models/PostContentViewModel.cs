@@ -12,7 +12,5 @@ namespace CmsWannabe.Models
         public string TemplateTop { get; set; }
 
         public string TemplateBottom { get; set; }
-
-        public string Url { get; set; }
     }
 }

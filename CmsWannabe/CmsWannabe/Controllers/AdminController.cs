@@ -24,21 +24,42 @@ namespace CmsWannabe.Controllers
             return View();
         }
 
-        //[HttpGet]
-        //public ActionResult Post()
-        //{
-        //    return this.View();
-        //}
+        [HttpGet]
+        public ActionResult CreatePage()
+        {
+            return this.View(new PageViewModel()
+            {
+                PostContent = new PostContentViewModel()
+                {
+                    Image = new ImageViewModel()
+                }
+            });
+        }
 
-        //[HttpPost]
-        //public ActionResult Post(string postTitle, string postContent)
-        //{
-        //    this.context.Contentents.Add(new PostContent(postTitle, postContent));
+        [HttpPost]
+        public ActionResult CreatePage(PageViewModel page)
+        {
+            Image img = new Image() { Url = page.PostContent.Image.Url };
 
-        //    this.context.SaveChanges();
+            PostContent postContent = new PostContent()
+            {
+                Image = img,
+                TemplateBottom = page.PostContent.TemplateBottom,
+                TemplateTop = page.PostContent.TemplateTop
+            };
 
-        //    return Json(new { success = true }, JsonRequestBehavior.AllowGet);
-        //}
+            Page p = new Page()
+            {
+                Name = page.Name,
+                Url = page.Url,
+                PostContent = postContent
+            };
+
+            this.context.Pages.Add(p);
+            this.context.SaveChanges();
+
+            return Json(new { success = true }, JsonRequestBehavior.AllowGet);
+        }
 
         public ActionResult RenderTemplate(string param1, string param2, string param3)
         {
@@ -64,9 +85,7 @@ namespace CmsWannabe.Controllers
 
             postContent.TemplateTop = page.PostContent.TemplateTop;
             postContent.TemplateBottom = page.PostContent.TemplateBottom;
-
-            postContent.Url = url;
-
+            
             return this.View("ImageAndTable", postContent);
         }
     }

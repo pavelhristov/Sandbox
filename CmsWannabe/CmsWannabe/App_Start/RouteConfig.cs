@@ -14,6 +14,12 @@ namespace CmsWannabe
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "CreatePage",
+                url: "admin/createpage",
+                defaults: new { controller = "Admin", action = "CreatePage"}
+            );
+
+            routes.MapRoute(
                 name: "RenderTemplates",
                 url: "{param1}/{param2}/{param3}",
                 defaults: new { controller = "Admin", action = "RenderTemplate",
@@ -21,12 +27,6 @@ namespace CmsWannabe
                     param2 = UrlParameter.Optional,
                     param3 = UrlParameter.Optional }
                 );
-
-            //routes.MapRoute(
-            //    name: "Default",
-            //    url: "{controller}/{action}/{id}",
-            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            //);
         }
     }
 }

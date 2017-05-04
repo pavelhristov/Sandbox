@@ -5,10 +5,15 @@
 
 <div>
     <div>
-        @Html.Partial("Image", Model.Image)
+        Url: <p>@Model.Url</p>
+    </div>
+
+    <div id="template-top-conteiner">
+        @Html.Partial($"{Model.TemplateTop}", Model.Image)
     </div>
     <hr />
-    <div>
-        @Html.Partial("Table")
+    <div id="template-bottom-conteiner">
+        @Html.Partial($"{Model.TemplateBottom}")
     </div>
 </div>
+

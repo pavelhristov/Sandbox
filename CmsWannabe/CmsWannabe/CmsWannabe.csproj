@@ -269,6 +269,7 @@
     <Content Include="Views\Shared\ImageAndTable.cshtml" />
     <Content Include="Views\Shared\Image.cshtml" />
     <Content Include="Views\Shared\Table.cshtml" />
+    <Content Include="Views\Shared\UnorderedList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

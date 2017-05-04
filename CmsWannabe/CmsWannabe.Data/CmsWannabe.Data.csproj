@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="IBaseDbContext.cs" />
     <Compile Include="ICmsWannabeDbContext.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Page.cs" />
     <Compile Include="Models\PostContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

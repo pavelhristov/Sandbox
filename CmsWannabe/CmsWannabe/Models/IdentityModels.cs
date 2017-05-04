@@ -28,7 +28,11 @@ namespace CmsWannabe.Models
         {
         }
 
-        public IDbSet<PostContent> Contentents { get; set; }
+        public IDbSet<PostContent> PostContentents { get; set; }
+
+        public IDbSet<Page> Pages { get; set; }
+
+        public IDbSet<Image> Images { get; set; }
 
         public static ApplicationDbContext Create()
         {

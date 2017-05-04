@@ -24,29 +24,48 @@ namespace CmsWannabe.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Post()
+        //[HttpGet]
+        //public ActionResult Post()
+        //{
+        //    return this.View();
+        //}
+
+        //[HttpPost]
+        //public ActionResult Post(string postTitle, string postContent)
+        //{
+        //    this.context.Contentents.Add(new PostContent(postTitle, postContent));
+
+        //    this.context.SaveChanges();
+
+        //    return Json(new { success = true }, JsonRequestBehavior.AllowGet);
+        //}
+
+        public ActionResult RenderTemplate(string param1, string param2, string param3)
         {
-            return this.View();
-        }
 
-        [HttpPost]
-        public ActionResult Post(string postTitle, string postContent)
-        {
-            this.context.Contentents.Add(new PostContent(postTitle, postContent));
+            string url = String.Empty +
+                (string.IsNullOrWhiteSpace(param1) ? "" : "/" + param1) +
+                (string.IsNullOrWhiteSpace(param2) ? "" : "/" + param2) +
+                (string.IsNullOrWhiteSpace(param3) ? "" : "/" + param3);
 
-            this.context.SaveChanges();
+            var pages = this.context.Pages.Where(p => p.Url == url).ToList();
+            if (pages.Count < 1)
+            {
+                return this.View("Error");
+            }
 
-            return Json(new { success = true }, JsonRequestBehavior.AllowGet);
-        }
+            var page = pages.First();
 
-        public ActionResult RenderTemplate()
-        {
             var postContent = new PostContentViewModel();
             postContent.Image = new ImageViewModel()
             {
-                Url = "https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg"
+                Url = page.PostContent.Image.Url
             };
+
+            postContent.TemplateTop = page.PostContent.TemplateTop;
+            postContent.TemplateBottom = page.PostContent.TemplateBottom;
+
+            postContent.Url = url;
 
             return this.View("ImageAndTable", postContent);
         }

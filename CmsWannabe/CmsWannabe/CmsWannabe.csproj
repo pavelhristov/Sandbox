@@ -192,6 +192,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Extensions\CustomViewEngine.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -267,10 +268,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\ImageAndTable.cshtml" />
-    <Content Include="Views\Shared\Image.cshtml" />
-    <Content Include="Views\Shared\Table.cshtml" />
-    <Content Include="Views\Shared\UnorderedList.cshtml" />
+    <Content Include="Views\Shared\Templates\ImageAndTable.cshtml" />
+    <Content Include="Views\Shared\Templates\Image.cshtml" />
+    <Content Include="Views\Shared\Templates\Table.cshtml" />
+    <Content Include="Views\Shared\Templates\UnorderedList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
